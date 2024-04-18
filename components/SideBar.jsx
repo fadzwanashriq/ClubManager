@@ -4,6 +4,7 @@ import SideBarButton from "./SideBarButton";
 import Logo from "./Logo";
 import Image from "next/image";
 import clsx from "clsx";
+import { FaCalendarAlt, FaMoneyBillWave, FaRegLightbulb, FaTachometerAlt, FaUserFriends } from "react-icons/fa";
 
 export default function SideBar({clubId, isSidebarOpen}) {
 
@@ -31,11 +32,13 @@ export default function SideBar({clubId, isSidebarOpen}) {
                                 </div>
                             </a>
                         </div>
-                        <SideBarButton text={"Dashboard"} link={`/club/${clubId}/dashboard`}></SideBarButton>
-                        <SideBarButton text={"General"} link={`/club/${clubId}/general`}></SideBarButton>
-                        <SideBarButton text={"Membership"} link={`/club/${clubId}/membership`}></SideBarButton>
-                        <SideBarButton text={"Club programmes"} link={`/club/${clubId}/program`}></SideBarButton>
-                        <SideBarButton text={"Financial"} link={`/club/${clubId}/financial`}></SideBarButton>
+
+
+                        <SideBarButton text={"Dashboard"} link={`/club/${clubId}/dashboard`} icon={<FaTachometerAlt/>}></SideBarButton>
+                        <SideBarButton text={"General"} link={`/club/${clubId}/general`} icon={<FaRegLightbulb/>}></SideBarButton>
+                        <SideBarButton text={"Membership"} link={`/club/${clubId}/membership`} icon={<FaUserFriends/>}></SideBarButton>
+                        <SideBarButton text={"Club programmes"} link={`/club/${clubId}/program`} icon={<FaCalendarAlt/>}></SideBarButton>
+                        <SideBarButton text={"Financial"} link={`/club/${clubId}/financial`} icon={<FaMoneyBillWave/>}></SideBarButton>
                     </div>
                 </div>
             </section>
